@@ -1,12 +1,12 @@
 Given(/^I know the "(.*?)" of the "(.*?)" I've seen$/) do |location, birds|
- pending 
+ @birdlist = EBird::EBird.new
 end
 
-When(/^I list the "(.*?)"$/) do |arg1|
+When(/^I list the "(.*?)"$/) do |birds|
   pending # express the regexp above with the code you wish you had
 end
 
-When(/^assign them the "(.*?)"$/) do |arg1|
+When(/^assign them the "(.*?)"$/) do  |location|
   pending # express the regexp above with the code you wish you had
 end
 

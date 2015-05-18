@@ -1,4 +1,5 @@
 require 'httparty'
+require 'erb'
 
 module EBird
   class EBird
@@ -11,7 +12,7 @@ module EBird
     def recent_observations_geo(lat, lng, query_options={})
       options = {:query => {:lat => lat, :lng => lng, :fmt => 'xml'}}
       options[:query].merge!(query_options)
-      self.class.get("/data/obs/geo/recent", options)
+      self.class.get("/data/obs/geo/recent", options).parsed_response
     end
 
     def recent_species_observations_geo(lat, lng, sci, query_options={})

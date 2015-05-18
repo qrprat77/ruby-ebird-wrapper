@@ -1,9 +1,11 @@
 require 'httparty'
 require 'csv'
+require 'erb'
 
 module EBird
   class AvianKnowledge
     include HTTParty
+   
     base_uri 'ebird.org/ws1.1'
 
     def country_list
